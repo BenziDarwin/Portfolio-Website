@@ -25,6 +25,7 @@ export function ContactSection() {
             <motion.div
               whileHover={{ y: -5 }}
               className="py-6 px-3 bg-white dark:bg-gray-800 rounded-xl shadow-lg"
+              onClick={() => window.open("mailto:ssalibenjamin0402@gmail.com", "_blank")}
             >
               <Mail className="w-8 h-8 mb-4 mx-auto text-purple-600 dark:text-purple-400" />
               <h3 className="font-semibold mb-2">Email</h3>
@@ -34,6 +35,7 @@ export function ContactSection() {
             <motion.div
               whileHover={{ y: -5 }}
               className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg"
+              onClick={() => window.open("tel:+256773457817", "_blank")}
             >
               <Phone className="w-8 h-8 mb-4 mx-auto text-blue-600 dark:text-blue-400" />
               <h3 className="font-semibold mb-2">Phone</h3>
@@ -43,6 +45,7 @@ export function ContactSection() {
             <motion.div
               whileHover={{ y: -5 }}
               className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg"
+              onClick={() => window.open("https://www.linkedin.com/in/benzidarwin", "_blank")}
             >
               <MessageSquare className="w-8 h-8 mb-4 mx-auto text-pink-600 dark:text-pink-400" />
               <h3 className="font-semibold mb-2">LinkedIn</h3>

@@ -17,13 +17,13 @@ export function Footer() {
             <p className="text-gray-600 dark:text-gray-400">Full-Stack Developer</p>
           </div>
           <div className="flex space-x-6">
-            <a href="https://github.com" className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors">
+            <a href="https://github.com/BenziDarwin" target="_blank" className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors">
               <Github className="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
+            <a href="https://www.linkedin.com/in/benzidarwin" target="_blank" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="mailto:contact@example.com" className="text-gray-600 hover:text-pink-600 dark:text-gray-400 dark:hover:text-pink-400 transition-colors">
+            <a href="mailto:ssalibenjamin0402@gmail.com" target="_blank" className="text-gray-600 hover:text-pink-600 dark:text-gray-400 dark:hover:text-pink-400 transition-colors">
               <Mail className="w-6 h-6" />
             </a>
           </div>

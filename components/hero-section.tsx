@@ -24,15 +24,15 @@ export function HeroSection() {
             Building elegant solutions to complex problems with modern technologies
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2" onClick={() => window.open("https://github.com/BenziDarwin", "_blank")}>
               <Github className="w-5 h-5" />
               GitHub
             </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2" onClick={() => window.open("https://www.linkedin.com/in/benzidarwin", "_blank")}>
               <Linkedin className="w-5 h-5" />
               LinkedIn
             </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2" onClick={() => window.open("tel:+256773457817", "_blank")}>
               <Mail className="w-5 h-5" />
               Contact
             </Button>
