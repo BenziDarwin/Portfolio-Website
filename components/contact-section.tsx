@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail, MessageSquare, Phone } from "lucide-react";
-import { Button } from "./ui/button";
+import { ContactForm } from "./contact-form";
 
 export function ContactSection() {
   return (
@@ -24,11 +24,11 @@ export function ContactSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               whileHover={{ y: -5 }}
-              className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg"
+              className="py-6 px-3 bg-white dark:bg-gray-800 rounded-xl shadow-lg"
             >
               <Mail className="w-8 h-8 mb-4 mx-auto text-purple-600 dark:text-purple-400" />
               <h3 className="font-semibold mb-2">Email</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">contact@example.com</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">ssalibenjamin0402@gmail.com</p>
             </motion.div>
             
             <motion.div
@@ -37,7 +37,7 @@ export function ContactSection() {
             >
               <Phone className="w-8 h-8 mb-4 mx-auto text-blue-600 dark:text-blue-400" />
               <h3 className="font-semibold mb-2">Phone</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">+1 234 567 890</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">+256 773 457 817</p>
             </motion.div>
             
             <motion.div
@@ -45,14 +45,14 @@ export function ContactSection() {
               className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg"
             >
               <MessageSquare className="w-8 h-8 mb-4 mx-auto text-pink-600 dark:text-pink-400" />
-              <h3 className="font-semibold mb-2">Social</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">@ssalibenjamin</p>
+              <h3 className="font-semibold mb-2">LinkedIn</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">@BenziDarwin</p>
             </motion.div>
           </div>
           
-          <Button className="mt-12" size="lg">
-            Send Message
-          </Button>
+          <div className="mt-12">
+            <ContactForm />
+          </div>
         </motion.div>
       </div>
     </section>

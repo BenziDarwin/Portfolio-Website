@@ -19,7 +19,7 @@ export function AboutSection() {
             <div className="sticky top-24">
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-6 shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?auto=format&fit=crop&q=80&w=2070"
+                  src="/images/ssali-benjamin.jpg"
                   alt="Ssali Benjamin"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
@@ -27,7 +27,7 @@ export function AboutSection() {
               </div>
               <div className="flex justify-between items-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
                 <div className="text-center flex-1">
-                  <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">5+</p>
+                  <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">3+</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Years Experience</p>
                 </div>
                 <div className="text-center flex-1">
@@ -35,7 +35,7 @@ export function AboutSection() {
                   <p className="text-sm text-gray-600 dark:text-gray-400">Projects</p>
                 </div>
                 <div className="text-center flex-1">
-                  <p className="text-3xl font-bold text-pink-600 dark:text-pink-400">20+</p>
+                  <p className="text-3xl font-bold text-pink-600 dark:text-pink-400">10+</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Clients</p>
                 </div>
               </div>
@@ -56,7 +56,7 @@ export function AboutSection() {
             <div className="prose prose-lg dark:prose-invert mb-8">
               <p className="text-gray-600 dark:text-gray-300">
                 I'm a passionate Software Engineer with a deep love for creating innovative solutions. 
-                With over 5 years of experience in full-stack development, I've had the privilege of 
+                With over 3 years of experience in full-stack development, I've had the privilege of 
                 working on diverse projects that have shaped my expertise in building scalable, 
                 efficient, and user-friendly applications.
               </p>
@@ -71,14 +71,14 @@ export function AboutSection() {
               <div className="space-y-4">
                 {[
                   {
-                    title: "Senior Software Engineer",
-                    company: "Tech Innovators Inc.",
-                    period: "2021 - Present"
+                    title: "Software Developer",
+                    company: "Coseke Uganda Limited",
+                    period: "2023 - Present"
                   },
                   {
                     title: "Full Stack Developer",
-                    company: "Digital Solutions Ltd.",
-                    period: "2019 - 2021"
+                    company: "Freelancer",
+                    period: "2020 - Present"
                   }
                 ].map((exp, index) => (
                   <motion.div
@@ -112,7 +112,7 @@ export function AboutSection() {
                     <h4 className="font-semibold">Frontend</h4>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {["React", "Next.js", "Vue", "TypeScript"].map((skill) => (
+                    {["React", "Next.js", "Tailwindcss", "TypeScript"].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-sm">
                         {skill}
                       </span>
@@ -129,7 +129,7 @@ export function AboutSection() {
                     <h4 className="font-semibold">Backend</h4>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {["Node.js", "Python", "PostgreSQL", "MongoDB"].map((skill) => (
+                    {["Node.js", "Flask", "Golang", "Spring Boot"].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">
                         {skill}
                       </span>
@@ -160,10 +160,10 @@ export function AboutSection() {
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <Globe className="w-6 h-6 text-green-600 dark:text-green-400" />
-                    <h4 className="font-semibold">Cloud & DevOps</h4>
+                    <h4 className="font-semibold">Blockchain</h4>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {["AWS", "Firebase", "Docker", "CI/CD"].map((skill) => (
+                    {["Rust", "Solidity", "Etherereum", "hardhat", "brownie"].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm">
                         {skill}
                       </span>
