@@ -163,7 +163,7 @@ export function AboutSection() {
                     <h4 className="font-semibold">Blockchain</h4>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {["Rust", "Solidity", "Etherereum", "hardhat", "brownie"].map((skill) => (
+                    {["Rust", "Solidity", "Ethereum", "hardhat", "brownie"].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm">
                         {skill}
                       </span>
