@@ -10,7 +10,7 @@ interface ProjectCardProps {
   description: string;
   image: string;
   technologies: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
   index: number;
 }
@@ -45,12 +45,13 @@ export function ProjectCard({ title, description, image, technologies, githubUrl
           ))}
         </div>
         <div className="flex space-x-3">
-          <Button variant="outline" size="sm" asChild>
+          {githubUrl && (  <Button variant="outline" size="sm" asChild>
             <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               <Github className="w-4 h-4" />
               Code
             </a>
-          </Button>
+          </Button>)}
+        
           {liveUrl && (
             <Button variant="outline" size="sm" asChild>
               <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">

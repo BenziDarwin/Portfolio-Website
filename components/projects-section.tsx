@@ -4,51 +4,50 @@ import { ProjectCard } from "./project-card";
 
 const projects = [
   {
-    title: "AI-Powered Task Manager",
-    description: "A smart task management system that uses AI to prioritize and categorize tasks automatically.",
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=2072",
-    technologies: ["Next.js", "OpenAI", "TypeScript", "Tailwind CSS"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://demo.com"
+    title: "Blogging Portfolio Website",
+    description: "A personal blogging portfolio website to showcase projects and write articles.",
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", // A desktop setup with blogging vibe
+    technologies: ["React", "Firebase"],
+    liveUrl: "https://sabrinakitaka.org"
   },
   {
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce platform with real-time inventory management and analytics.",
-    image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=2070",
-    technologies: ["React", "Node.js", "MongoDB", "Redux"],
-    githubUrl: "https://github.com"
+    title: "Event Planning and Management App",
+    description: "A mobile app designed for organizing and managing events efficiently.",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", // People planning an event
+    technologies: ["React Native", "Golang"],
+    liveUrl: "https://festivityhub.app"
   },
   {
-    title: "Real-time Chat Application",
-    description: "A modern chat application with real-time messaging, file sharing, and voice calls.",
-    image: "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?auto=format&fit=crop&q=80&w=2070",
-    technologies: ["Socket.io", "React", "Express", "WebRTC"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://demo.com"
+    title: "Recruitment Website",
+    description: "A web platform for streamlining the recruitment process with advanced search features.",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", // Laptop with hiring keywords
+    technologies: ["React", "Spring Boot"],
+    githubUrl: "https://github.com/Crimson-Recruitment/Web-Platform"
   },
   {
-    title: "Fitness Tracking App",
-    description: "A comprehensive fitness tracking application with workout plans and progress visualization.",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=2070",
-    technologies: ["React Native", "Firebase", "TypeScript"],
-    githubUrl: "https://github.com"
+    title: "Game Engine",
+    description: "An experimental game engine built using Rust and Vulkan for high-performance graphics.",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", // Computer with a game dev environment
+    technologies: ["Rust", "Vulkan"],
+    githubUrl: "https://github.com/Immersion-s-Control-Engine/ICE-Project"
   },
   {
-    title: "Weather Dashboard",
-    description: "A beautiful weather dashboard with detailed forecasts and interactive maps.",
-    image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&q=80&w=2070",
-    technologies: ["Vue.js", "D3.js", "Weather API"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://demo.com"
+    title: "Blockchain-based E-Banking System",
+    description: "A secure e-banking system utilizing blockchain technology and smart contracts.",
+    image: "https://images.unsplash.com/photo-1631864031824-d636e1dc5292?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Your chosen image
+    technologies: ["Next.js", "Firebase", "Smart Contracts"],
+    liveUrl: "https://blocksafe.vercel.app"
   },
   {
-    title: "Blog Platform",
-    description: "A modern blogging platform with markdown support and SEO optimization.",
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=2070",
-    technologies: ["Next.js", "MDX", "PostgreSQL"],
-    githubUrl: "https://github.com"
+    title: "Python Trading Bot",
+    description: "A simple trading bot developed in Python for automating trading strategies.",
+    image: "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", // Stock market charts
+    technologies: ["Python", "MT5"],
+    githubUrl: "https://github.com/BenziDarwin/S-D-Algo-Python-Forex-Bot"
   }
 ];
+
+
 
 export function ProjectsSection() {
   return (
