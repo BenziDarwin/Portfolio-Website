@@ -36,7 +36,7 @@ const projects = [
     description: "A secure e-banking system utilizing blockchain technology and smart contracts.",
     image: "https://images.unsplash.com/photo-1631864031824-d636e1dc5292?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Your chosen image
     technologies: ["Next.js", "Firebase", "Smart Contracts"],
-    liveUrl: "https://blocksafe.vercel.app"
+    liveUrl: "https://blocksafe-dapp.web.app"
   },
   {
     title: "Python Trading Bot",
