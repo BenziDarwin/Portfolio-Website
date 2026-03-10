@@ -8,8 +8,8 @@ import { Toaster } from '@/components/ui/toaster';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Ssali Benjamin - Software Engineer',
-  description: 'Portfolio website of Ssali Benjamin, Software Engineer and Full-Stack Developer',
+  title: 'Ssali Benjamin Tamale | Software Engineer',
+  description: 'Portfolio and CV site for Ssali Benjamin Tamale, a software engineer focused on backend, full-stack, mobile, and systems delivery.',
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <Providers>
-          <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+          <div className="min-h-screen bg-background text-foreground">
             <Navbar />
             {children}
             <Toaster />

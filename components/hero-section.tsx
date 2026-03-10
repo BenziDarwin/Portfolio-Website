@@ -1,45 +1,84 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
+
+const highlights = [
+  "Software Developer at Coseke Uganda Limited",
+  "Systems Developer (Volunteer) at Ministry of Health",
+  "Freelance full-stack developer since 2020",
+  "Makerere University BSc Software Engineering, CGPA 3.57",
+];
 
 export function HeroSection() {
   return (
-    <section className="min-h-[calc(100vh-4rem)] flex items-center">
-      <div className="container mx-auto px-4 w-full sm:w-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto text-center"
-        >
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-400 dark:to-blue-600 text-transparent bg-clip-text">
-            Ssali Benjamin
+    <section className="border-b border-border">
+      <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-16 lg:grid-cols-[1.4fr_0.8fr] lg:py-24">
+        <div>
+          <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
+            Software Engineer
+          </p>
+          <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
+            Ssali Benjamin Tamale
           </h1>
-          <p className="text-xl sm:text-2xl mb-6 sm:mb-8 text-gray-600 dark:text-gray-300">
-            Software Engineer & Full-Stack Developer
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
+            I build full-stack applications, backend APIs, cross-platform mobile apps, and automation tooling.
+            My work spans Spring Boot, Kotlin, Java, Next.js, React, React Native, Golang, Python, Docker,
+            and practical CI/CD delivery.
           </p>
-          <p className="text-base sm:text-lg mb-6 sm:mb-8 text-gray-600 dark:text-gray-400">
-            Building elegant solutions to complex problems with modern technologies
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2" onClick={() => window.open("https://github.com/BenziDarwin", "_blank")}>
-              <Github className="w-5 h-5" />
-              GitHub
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild variant="default" className="rounded-none">
+              <a href="mailto:ssalibenjamin0402@gmail.com">
+                <Mail className="mr-2 h-4 w-4" />
+                Email
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2" onClick={() => window.open("https://www.linkedin.com/in/benzidarwin", "_blank")}>
-              <Linkedin className="w-5 h-5" />
-              LinkedIn
+            <Button asChild variant="outline" className="rounded-none">
+              <a href="https://github.com/BenziDarwin" target="_blank" rel="noreferrer">
+                <Github className="mr-2 h-4 w-4" />
+                GitHub
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2" onClick={() => window.open("tel:+256773457817", "_blank")}>
-              <Mail className="w-5 h-5" />
-              Contact
+            <Button asChild variant="outline" className="rounded-none">
+              <a href="https://www.linkedin.com/in/benzidarwin" target="_blank" rel="noreferrer">
+                <Linkedin className="mr-2 h-4 w-4" />
+                LinkedIn
+              </a>
             </Button>
           </div>
-        </motion.div>
+        </div>
+
+        <div className="border border-border bg-card p-6">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
+            Snapshot
+          </p>
+          <ul className="mt-4 space-y-4 text-sm leading-6 text-muted-foreground">
+            {highlights.map((item) => (
+              <li key={item} className="border-l-2 border-foreground pl-4 text-foreground">
+                {item}
+              </li>
+            ))}
+          </ul>
+          <div className="mt-8 grid grid-cols-2 gap-3">
+            <div className="border border-border p-4">
+              <p className="text-2xl font-semibold">5+</p>
+              <p className="mt-1 text-sm text-muted-foreground">years shipping software</p>
+            </div>
+            <div className="border border-border p-4">
+              <p className="text-2xl font-semibold">80+</p>
+              <p className="mt-1 text-sm text-muted-foreground">public repositories</p>
+            </div>
+            <div className="border border-border p-4">
+              <p className="text-2xl font-semibold">3</p>
+              <p className="mt-1 text-sm text-muted-foreground">active work tracks</p>
+            </div>
+            <div className="border border-border p-4">
+              <p className="text-2xl font-semibold">Uganda</p>
+              <p className="mt-1 text-sm text-muted-foreground">based in Wakiso</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
-

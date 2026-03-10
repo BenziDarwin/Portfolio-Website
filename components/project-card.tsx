@@ -1,67 +1,69 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { Github, ExternalLink } from "lucide-react";
-import { Button } from "./ui/button";
-import Image from "next/image";
+import { ExternalLink, Github } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
   description: string;
-  image: string;
+  outcome: string;
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
-  index: number;
 }
 
-export function ProjectCard({ title, description, image, technologies, githubUrl, liveUrl, index }: ProjectCardProps) {
+export function ProjectCard({
+  title,
+  description,
+  outcome,
+  technologies,
+  githubUrl,
+  liveUrl,
+}: ProjectCardProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden"
-    >
-      <div className="relative h-48 w-full">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover"
-        />
-      </div>
-      <div className="p-6">
-        <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:to-blue-400 text-transparent bg-clip-text">{title}</h3>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {technologies.map((tech) => (
-            <span
-              key={tech}
-              className="px-3 py-1 text-sm bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full"
-            >
-              {tech}
-            </span>
-          ))}
+    <article className="border border-border bg-card p-5">
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h3 className="text-lg font-semibold">{title}</h3>
+          <p className="mt-3 text-sm leading-6 text-muted-foreground">{description}</p>
         </div>
-        <div className="flex space-x-3">
-          {githubUrl && (  <Button variant="outline" size="sm" asChild>
-            <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-              <Github className="w-4 h-4" />
-              Code
+      </div>
+
+      <p className="mt-4 border-l-2 border-foreground pl-4 text-sm leading-6 text-foreground">
+        {outcome}
+      </p>
+
+      <div className="mt-4 flex flex-wrap gap-2">
+        {technologies.map((tech) => (
+          <span key={tech} className="border border-border px-3 py-1 text-sm">
+            {tech}
+          </span>
+        ))}
+      </div>
+
+      {(githubUrl || liveUrl) && (
+        <div className="mt-5 flex flex-wrap gap-4 text-sm">
+          {githubUrl && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <Github className="h-4 w-4" />
+              Source
             </a>
-          </Button>)}
-        
+          )}
           {liveUrl && (
-            <Button variant="outline" size="sm" asChild>
-              <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <ExternalLink className="w-4 h-4" />
-                Live Demo
-              </a>
-            </Button>
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Live
+            </a>
           )}
         </div>
-      </div>
-    </motion.div>
+      )}
+    </article>
   );
 }

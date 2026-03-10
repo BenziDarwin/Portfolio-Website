@@ -1,178 +1,148 @@
-"use client";
+const achievements = [
+  "Built an offline-first React Native mobile application for Ebtabo POS and set up CI/CD for automated APK builds and Google Play Store delivery.",
+  "Worked with the Ministry of Health on partner and patient registry systems in Go, including analytics support for planning and budgeting.",
+  "Delivered full-stack applications at Coseke using Spring Boot, Kotlin, Java, React, and Next.js, including Alfresco integrations and technical bid support.",
+  "Contributed as a software engineer and consultant on blockchain and AI research focused on energy efficiency and security.",
+];
 
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { Code2, Database, Globe, Laptop, Briefcase, GraduationCap, Award } from "lucide-react";
+const experience = [
+  {
+    role: "Systems Developer (Volunteer)",
+    company: "Ministry of Health",
+    period: "May 2025 - Present",
+    points: [
+      "Developing registry systems for chronic illness tracking and NGO partner monitoring.",
+      "Using Golang, HTML, JavaScript, and CSS for internal health systems.",
+      "Supporting analytics workflows for planning and budgeting.",
+    ],
+  },
+  {
+    role: "Software Developer",
+    company: "Coseke Uganda Limited",
+    period: "September 2023 - Present",
+    points: [
+      "Built full-stack applications with Spring Boot, Next.js, and React.",
+      "Integrated and extended Alfresco-based content management systems.",
+      "Contributed to system architecture, technical documentation, and bid proposals.",
+    ],
+  },
+  {
+    role: "Freelance Developer",
+    company: "Self Employed",
+    period: "January 2020 - Present",
+    points: [
+      "Delivered websites and APIs for clients including SAHU, Dr. Sabrina Kitaka, Realdeal Creditors, and Yunesta.",
+      "Maintained production content and functionality for deployed client systems.",
+    ],
+  },
+];
+
+const education = [
+  "Makerere University - BSc Software Engineering, 2021 to present, CGPA 3.57",
+  "Kibuli Secondary School UACE - 2019 to 2020, 15 points",
+  "Kibuli Secondary School UCE - 2015 to 2018, 25 aggregates",
+];
+
+const skillGroups = [
+  {
+    title: "Backend",
+    items: ["Spring Boot", "Kotlin", "Java", "Golang", "REST APIs", "WebSockets"],
+  },
+  {
+    title: "Frontend",
+    items: ["React", "Next.js", "TypeScript", "Responsive Web"],
+  },
+  {
+    title: "Mobile",
+    items: ["React Native", "Expo", "Offline-first app delivery"],
+  },
+  {
+    title: "Data and AI",
+    items: ["Python", "Machine Learning", "Deep Learning", "Data Analysis"],
+  },
+  {
+    title: "Infrastructure",
+    items: ["Docker", "Docker Compose", "CI/CD", "Linux deployment"],
+  },
+  {
+    title: "Data Stores",
+    items: ["Postgres", "MSSQL"],
+  },
+];
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Image Column */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="lg:col-span-5"
-          >
-            <div className="sticky top-24">
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-6 shadow-2xl">
-                <Image
-                  src="/images/ssali-benjamin.jpg"
-                  alt="Ssali Benjamin"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="flex justify-between items-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-                <div className="text-center flex-1">
-                  <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">3+</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Years Experience</p>
+    <section id="summary" className="border-b border-border">
+      <div className="mx-auto grid w-full max-w-6xl gap-12 px-4 py-16 lg:grid-cols-[1.1fr_0.9fr]">
+        <div>
+          <h2 className="text-2xl font-semibold tracking-tight">Summary</h2>
+          <p className="mt-5 max-w-3xl text-base leading-7 text-muted-foreground">
+            I am a software engineer with experience designing full-stack applications, backend services,
+            mobile apps, UML-driven system designs, and CI/CD workflows. I focus on building reliable software
+            that solves real operational problems while staying practical about maintainability and delivery.
+          </p>
+
+          <h3 id="experience" className="mt-12 text-xl font-semibold tracking-tight">
+            Experience
+          </h3>
+          <div className="mt-6 space-y-6">
+            {experience.map((item) => (
+              <article key={`${item.role}-${item.company}`} className="border border-border p-5">
+                <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+                  <div>
+                    <h4 className="text-lg font-medium">{item.role}</h4>
+                    <p className="text-sm text-muted-foreground">{item.company}</p>
+                  </div>
+                  <p className="text-sm text-muted-foreground">{item.period}</p>
                 </div>
-                <div className="text-center flex-1">
-                  <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">50+</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Projects</p>
+                <ul className="mt-4 space-y-2 text-sm leading-6 text-muted-foreground">
+                  {item.points.map((point) => (
+                    <li key={point}>- {point}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+
+          <h3 className="mt-12 text-xl font-semibold tracking-tight">Selected achievements</h3>
+          <ul className="mt-6 space-y-3 text-sm leading-6 text-muted-foreground">
+            {achievements.map((item) => (
+              <li key={item} className="border-l-2 border-foreground pl-4 text-foreground">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="space-y-8">
+          <div className="border border-border p-5">
+            <h3 className="text-xl font-semibold tracking-tight">Education</h3>
+            <ul className="mt-4 space-y-3 text-sm leading-6 text-muted-foreground">
+              {education.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="border border-border p-5">
+            <h3 className="text-xl font-semibold tracking-tight">Core skills</h3>
+            <div className="mt-5 space-y-5">
+              {skillGroups.map((group) => (
+                <div key={group.title}>
+                  <p className="text-sm font-medium uppercase tracking-[0.18em] text-muted-foreground">
+                    {group.title}
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {group.items.map((item) => (
+                      <span key={item} className="border border-border px-3 py-1 text-sm">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <div className="text-center flex-1">
-                  <p className="text-3xl font-bold text-pink-600 dark:text-pink-400">10+</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Clients</p>
-                </div>
-              </div>
+              ))}
             </div>
-          </motion.div>
-
-          {/* Content Column */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="lg:col-span-7"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:to-blue-400 text-transparent bg-clip-text">
-              About Me
-            </h2>
-            
-            <div className="prose prose-lg dark:prose-invert mb-8">
-              <p className="text-gray-600 dark:text-gray-300">
-                I'm a passionate Software Engineer with a deep love for creating innovative solutions. 
-                With over 3 years of experience in full-stack development, I've had the privilege of 
-                working on diverse projects that have shaped my expertise in building scalable, 
-                efficient, and user-friendly applications.
-              </p>
-            </div>
-
-            {/* Experience Timeline */}
-            <div className="space-y-6 mb-8">
-              <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-                <Briefcase className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                Experience
-              </h3>
-              <div className="space-y-4">
-                {[
-                  {
-                    title: "Software Developer",
-                    company: "Coseke Uganda Limited",
-                    period: "2023 - Present"
-                  },
-                  {
-                    title: "Full Stack Developer",
-                    company: "Freelancer",
-                    period: "2020 - Present"
-                  }
-                ].map((exp, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 + index * 0.1 }}
-                    className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md"
-                  >
-                    <h4 className="font-semibold text-lg">{exp.title}</h4>
-                    <p className="text-gray-600 dark:text-gray-400">{exp.company}</p>
-                    <p className="text-sm text-blue-600 dark:text-blue-400">{exp.period}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Skills Grid */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-                <Award className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                Technical Skills
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <Code2 className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                    <h4 className="font-semibold">Frontend</h4>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {["React", "Next.js", "Tailwindcss", "TypeScript"].map((skill) => (
-                      <span key={skill} className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <Database className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                    <h4 className="font-semibold">Backend</h4>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {["Node.js", "Flask", "Golang", "Spring Boot"].map((skill) => (
-                      <span key={skill} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <Laptop className="w-6 h-6 text-pink-600 dark:text-pink-400" />
-                    <h4 className="font-semibold">Mobile</h4>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {["React Native", "Flutter", "iOS", "Android"].map((skill) => (
-                      <span key={skill} className="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-300 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <Globe className="w-6 h-6 text-green-600 dark:text-green-400" />
-                    <h4 className="font-semibold">Blockchain</h4>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {["Rust", "Solidity", "Ethereum", "hardhat", "brownie"].map((skill) => (
-                      <span key={skill} className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

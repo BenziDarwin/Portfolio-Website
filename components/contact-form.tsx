@@ -72,7 +72,7 @@ export function ContactForm() {
         <DialogHeader>
           <DialogTitle>Send a Message</DialogTitle>
           <DialogDescription>
-            Fill out the form below and I'll get back to you as soon as possible.
+            Fill out the form below and I&apos;ll get back to you as soon as possible.
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>

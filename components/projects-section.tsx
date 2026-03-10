@@ -1,64 +1,74 @@
-"use client";
-
 import { ProjectCard } from "./project-card";
 
 const projects = [
   {
-    title: "Blogging Portfolio Website",
-    description: "A personal blogging portfolio website to showcase projects and write articles.",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", // A desktop setup with blogging vibe
-    technologies: ["React", "Firebase"],
-    liveUrl: "https://sabrinakitaka.org"
+    title: "Ebtabo Mobile Application",
+    description:
+      "Contracted mobile application work for Ebtabo POS with an offline-first architecture using React Native.",
+    outcome:
+      "Set up CI/CD pipelines for testing and APK builds and supported deployment to the Google Play Store.",
+    technologies: ["React Native", "Expo", "CI/CD", "Android"],
   },
   {
-    title: "Event Planning and Management App",
-    description: "A mobile app designed for organizing and managing events efficiently.",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", // People planning an event
-    technologies: ["React Native", "Golang"],
-    liveUrl: "https://festivityhub.app"
+    title: "Ministry of Health Partners Portal",
+    description:
+      "Internal partner management portal for the Ministry of Health built and hosted for intranet use.",
+    outcome:
+      "Delivered a Go-based system used to monitor health-program support and improve planning visibility.",
+    technologies: ["Golang", "Linux", "Intranet", "Analytics"],
   },
   {
-    title: "Recruitment Website",
-    description: "A web platform for streamlining the recruitment process with advanced search features.",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", // Laptop with hiring keywords
-    technologies: ["React", "Spring Boot"],
-    githubUrl: "https://github.com/Crimson-Recruitment/Web-Platform"
+    title: "Blockchain E-Banking System",
+    description:
+      "A decentralized banking and token campaign platform built around blockchain concepts and smart contracts.",
+    outcome:
+      "Implemented account onboarding and a DAO-style workflow for fundraising and governance.",
+    technologies: ["Next.js", "Solidity", "Firebase", "Smart Contracts"],
+    liveUrl: "https://blocksafe-dapp.web.app",
   },
   {
-    title: "Game Engine",
-    description: "An experimental game engine built using Rust and Vulkan for high-performance graphics.",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", // Computer with a game dev environment
-    technologies: ["Rust", "Vulkan"],
-    githubUrl: "https://github.com/Immersion-s-Control-Engine/ICE-Project"
+    title: "Portfolio Website",
+    description:
+      "Personal portfolio website used to present work, experience, and contact details.",
+    outcome:
+      "Reworked to function as a plain online CV with stronger factual positioning.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    githubUrl: "https://github.com/BenziDarwin/Portfolio-Website",
   },
   {
-    title: "Blockchain-based E-Banking System",
-    description: "A secure e-banking system utilizing blockchain technology and smart contracts.",
-    image: "https://images.unsplash.com/photo-1631864031824-d636e1dc5292?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Your chosen image
-    technologies: ["Next.js", "Firebase", "Smart Contracts"],
-    liveUrl: "https://blocksafe-dapp.web.app"
+    title: "MT5 Algo Trading Models",
+    description:
+      "Machine learning experiments using MetaTrader 5 historical data for trading model development.",
+    outcome:
+      "Documented a repeatable workflow for model experimentation and evaluation.",
+    technologies: ["Python", "MetaTrader 5", "Machine Learning"],
+    githubUrl: "https://github.com/BenziDarwin/MT5-Algo-trading-models",
   },
   {
-    title: "Python Trading Bot",
-    description: "A simple trading bot developed in Python for automating trading strategies.",
-    image: "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400", // Stock market charts
-    technologies: ["Python", "MT5"],
-    githubUrl: "https://github.com/BenziDarwin/S-D-Algo-Python-Forex-Bot"
-  }
+    title: "Business Manager API",
+    description:
+      "Backend API work exploring business-management workflows and service design in Go.",
+    outcome:
+      "Expanded public backend work to better reflect server-side engineering capability.",
+    technologies: ["Go", "REST API"],
+    githubUrl: "https://github.com/BenziDarwin/Business-Manager-API",
+  },
 ];
-
-
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900/50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:to-blue-400 text-transparent bg-clip-text">
-          Featured Projects
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard key={project.title} {...project} index={index} />
+    <section id="projects" className="border-b border-border">
+      <div className="mx-auto w-full max-w-6xl px-4 py-16">
+        <div className="max-w-3xl">
+          <h2 className="text-2xl font-semibold tracking-tight">Selected work</h2>
+          <p className="mt-4 text-base leading-7 text-muted-foreground">
+            These projects reflect a mix of client delivery, internal systems work, and public technical experiments.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
           ))}
         </div>
       </div>
